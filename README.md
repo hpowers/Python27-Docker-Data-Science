@@ -17,8 +17,8 @@ What makes this image special is Python and Matplotlib are compiled with TkInter
 Notes:
 
 - [Image on Docker Hub](https://hub.docker.com/r/hunter/pythonscience/)
-- feeze.txt is a `pip freeze` from my VM before I trashed it
-- [Dockerfile_alt](https://github.com/hpowers/Python27-Docker-Data-Science/blob/master/Dockerfile_alt) builds a smaller image without TkInter support.
+- [feeze.txt](https://github.com/hpowers/Python27-Docker-Data-Science/blob/master/freeze.txt) is a `pip freeze` from my VM before I trashed it
+- [Dockerfile_alt](https://github.com/hpowers/Python27-Docker-Data-Science/blob/master/Dockerfile_alt) builds a smaller image without TkInter support
 
 
 
