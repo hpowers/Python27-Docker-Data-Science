@@ -20,8 +20,6 @@ Notes:
 - [feeze.txt](https://github.com/hpowers/Python27-Docker-Data-Science/blob/master/freeze.txt) is a `pip freeze` from my VM before I trashed it
 - [Dockerfile_alt](https://github.com/hpowers/Python27-Docker-Data-Science/blob/master/Dockerfile_alt) builds a smaller image without TkInter support
 
-
-
 ---------------------------------------
 
 ## Build the image
@@ -39,10 +37,10 @@ Notes:
 ## Run container with GUI support on OSX
 
 ### - First time
-`brew install socat`  
-`brew cask install xquartz`  
+`brew install socat`
+`brew cask install xquartz`
 
 ### - Every time
-`open -a XQuartz`  
-`socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"`  
+`open -a XQuartz`
+`socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"`
 `docker run -e DISPLAY=<docker host IP>:0 hunter/pythonscience bash`
