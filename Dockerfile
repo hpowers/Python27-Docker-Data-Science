@@ -1,13 +1,14 @@
-FROM python:2.7.11
+FROM buildpack-deps:jessie
 
-# scipy dev dependencies
 RUN apt-get update && apt-get install -y \
+    python-pip \
+    python2.7-dev \
     libblas-dev \
     liblapack-dev \
-    gfortran
+    gfortran \
+    python-matplotlib
 
 # python packages
 RUN pip install ipython==1.2.1
-RUN pip install numpy==1.8.2
+RUN pip install pandas==0.16.2
 RUN pip install scipy==0.13.3
-RUN pip install matplotlib==1.3.1
