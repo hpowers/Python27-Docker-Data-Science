@@ -5,7 +5,7 @@
 
 I used to use a VM for  python work, but recently decided it would be cooler if I could get everything working in Docker.
 
-This is Python 2.7.11 with the following extras
+This is Python 2.7.9 with the following extras
 
 * ipython
 * numpy
@@ -17,7 +17,7 @@ feeze.txt is a `pip freeze` from my VM before I trashed it
 
 What makes this image special is python and matplotlib are compiled with tkinter support so matplotlib uses the correct backend to send graphs to $DISPLAY.
 
-There is also `Dockerfile_alt` if you want a much smaller image and don't require TkInter.
+There is also [Dockerfile_alt](https://github.com/hpowers/Python27-Docker-Data-Science/blob/master/Dockerfile_alt) if you want a much smaller image and don't require TkInter.
 
 [Docker Hub Image](https://hub.docker.com/r/hunter/pythonscience/)
 
