@@ -1,6 +1,5 @@
 # Python 2.7 image for Machine Learning
 
-
 **README in progress:**
 
 I used to use a VM for Python work, but recently decided it would be cooler if I could get everything working in Docker.
@@ -13,13 +12,15 @@ This is Python 2.7.9 with the following extras
 * SciPy
 * Matplotlib
 
-feeze.txt is a `pip freeze` from my VM before I trashed it
-
 What makes this image special is Python and Matplotlib are compiled with TkInter support so Matplotlib uses the correct backend to send graphs to $DISPLAY.
 
-There is also [Dockerfile_alt](https://github.com/hpowers/Python27-Docker-Data-Science/blob/master/Dockerfile_alt) if you want a much smaller image and don't require TkInter.
+Notes:
 
-[Docker Hub Image](https://hub.docker.com/r/hunter/pythonscience/)
+- [Image on Docker Hub](https://hub.docker.com/r/hunter/pythonscience/)
+- feeze.txt is a `pip freeze` from my VM before I trashed it
+- [Dockerfile_alt](https://github.com/hpowers/Python27-Docker-Data-Science/blob/master/Dockerfile_alt) builds a smaller image without TkInter support.
+
+
 
 ---------------------------------------
 
