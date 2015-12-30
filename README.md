@@ -27,19 +27,13 @@ There is also `Dockerfile_alt` if you want a much smaller image and don't requir
 
 `docker build -t hunter/pythonscience .`
 
----------------------------------------
-
 ## Install image from Docker Hub
 
 `docker pull hunter/pythonscience`
 
----------------------------------------
-
 ## Run container with local src volume
 
 `docker run -itv <abs path to local volume>:/data hunter/pythonscience bash`
-
----------------------------------------
 
 ## Run container with GUI support on OSX
 
