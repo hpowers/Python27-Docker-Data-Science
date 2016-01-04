@@ -30,9 +30,9 @@ Notes:
 
 `docker pull hunter/pythonscience`
 
-## Run container with local src volume
+## Run container with active folder as /data volume
 
-`docker run -itv <abs path to local volume>:/data hunter/pythonscience bash`
+`docker run --rm -itv $(pwd):/data hunter/pythonscience bash`
 
 ## Run container with GUI support on OSX
 
@@ -41,6 +41,9 @@ Notes:
 `brew cask install xquartz`
 
 ### - Every time
-`open -a XQuartz`
-`socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"`
+`open -a XQuartz`  
+`socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"`  
 `docker run -e DISPLAY=<docker host IP>:0 hunter/pythonscience bash`
+
+alternate with volume mount  
+`docker run --rm -itv $(pwd):/data -e DISPLAY=$(docker-machine ip default):0 hunter/pythonscience bash`
